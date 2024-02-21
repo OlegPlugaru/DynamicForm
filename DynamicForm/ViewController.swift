@@ -38,6 +38,8 @@ private extension ViewController {
     func setup() {
         view.backgroundColor = .white
         
+        
+        // Setup CollectionView
         collectionVw.dataSource = dataSource
         // Layout
         
@@ -52,7 +54,9 @@ private extension ViewController {
     }
     
     func makeDataSource() -> UICollectionViewDiffableDataSource<FormSectionComponent, FormComponent> {
+        
         return UICollectionViewDiffableDataSource(collectionView: collectionVw) { collectionVw, indexPath, item in
+            
             switch item {
             case is TextFormComponent:
                 let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: FormTextCollectionViewCell.cellId, for: indexPath) as! FormTextCollectionViewCell
@@ -67,7 +71,7 @@ private extension ViewController {
                 cell.bind(item)
                 return cell
             default:
-                let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: UICollectionViewCell.cellId, for: indexPath)
+                let cell = collectionVw.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
                 return cell
             }
         }
@@ -80,7 +84,7 @@ private extension ViewController {
             
             var snapshot = NSDiffableDataSourceSnapshot<FormSectionComponent, FormComponent>()
             
-            let formSections = self.formContentBuilder.content
+            let formSections = self.formContentBuilder.formContent
             snapshot.appendSections(formSections)
             formSections.forEach { snapshot.appendItems($0.items, toSection: $0) }
             self.dataSource.apply(snapshot, animatingDifferences: animated)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD1D09972B860C1B0043217D /* RegexPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D09962B860C1B0043217D /* RegexPatterns.swift */; };
+		DD1D09992B861EC90043217D /* UITextField+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D09982B861EC90043217D /* UITextField+Validation.swift */; };
 		DD2BE6362B85265900837E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6352B85265900837E0A /* AppDelegate.swift */; };
 		DD2BE6382B85265900837E0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6372B85265900837E0A /* SceneDelegate.swift */; };
 		DD2BE63A2B85265900837E0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6392B85265900837E0A /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD1D09962B860C1B0043217D /* RegexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexPatterns.swift; sourceTree = "<group>"; };
+		DD1D09982B861EC90043217D /* UITextField+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Validation.swift"; sourceTree = "<group>"; };
 		DD2BE6322B85265900837E0A /* DynamicForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2BE6352B85265900837E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD2BE6372B85265900837E0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD1D09942B860B800043217D /* Regex */ = {
+			isa = PBXGroup;
+			children = (
+				DD1D09952B860BA40043217D /* Patterns */,
+			);
+			path = Regex;
+			sourceTree = "<group>";
+		};
+		DD1D09952B860BA40043217D /* Patterns */ = {
+			isa = PBXGroup;
+			children = (
+				DD1D09962B860C1B0043217D /* RegexPatterns.swift */,
+			);
+			path = Patterns;
+			sourceTree = "<group>";
+		};
 		DD2BE6292B85265900837E0A = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +92,7 @@
 		DD2BE6342B85265900837E0A /* DynamicForm */ = {
 			isa = PBXGroup;
 			children = (
+				DD1D09942B860B800043217D /* Regex */,
 				DD2BE65B2B85328700837E0A /* Layout */,
 				DD2BE6542B852DA200837E0A /* CollectionViewCells */,
 				DD2BE64F2B852CA100837E0A /* Extensions */,
@@ -109,6 +130,7 @@
 			children = (
 				DD2BE6502B852CC000837E0A /* UICollectionView+Identifier.swift */,
 				DD2BE6522B852D3500837E0A /* UICollectionViewCell+CleanUp.swift */,
+				DD1D09982B861EC90043217D /* UITextField+Validation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -204,6 +226,7 @@
 			files = (
 				DD2BE63A2B85265900837E0A /* ViewController.swift in Sources */,
 				DD2BE65D2B8532A600837E0A /* FormCompositionalLayout.swift in Sources */,
+				DD1D09992B861EC90043217D /* UITextField+Validation.swift in Sources */,
 				DD2BE6362B85265900837E0A /* AppDelegate.swift in Sources */,
 				DD2BE6532B852D3500837E0A /* UICollectionViewCell+CleanUp.swift in Sources */,
 				DD2BE64E2B852B8F00837E0A /* FormContentBuilderImpl.swift in Sources */,
@@ -212,6 +235,7 @@
 				DD2BE6512B852CC000837E0A /* UICollectionView+Identifier.swift in Sources */,
 				DD2BE6382B85265900837E0A /* SceneDelegate.swift in Sources */,
 				DD2BE6582B852FC700837E0A /* FormTextCollectionViewCell.swift in Sources */,
+				DD1D09972B860C1B0043217D /* RegexPatterns.swift in Sources */,
 				DD2BE64B2B8526BB00837E0A /* FormModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

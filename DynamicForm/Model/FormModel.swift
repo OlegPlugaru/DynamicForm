@@ -8,9 +8,14 @@
 import Foundation
 import UIKit
 
+// Implementation for a form item
+
 protocol FormItem {
     var id: UUID { get }
+    var formId: FormField { get }
 }
+
+// Implementation for a form section
 
 protocol FormSectionItem {
     var id: UUID { get }
@@ -18,13 +23,23 @@ protocol FormSectionItem {
     init(items: [FormComponent])
 }
 
-// Section Component
+// Unique identifiers for from items
+
+enum FormField: String, CaseIterable {
+    case firstName
+    case lastName
+    case email
+    case dob
+    case submit
+}
+
+// Component for a form section the form
 
 final class FormSectionComponent: FormSectionItem, Hashable {
-    var id: UUID = UUID()
+    let id: UUID = UUID()
     var items: [FormComponent]
     
-    init(items: [FormComponent]) {
+    required init(items: [FormComponent]) {
         self.items = items
     }
     
@@ -37,10 +52,13 @@ final class FormSectionComponent: FormSectionItem, Hashable {
     }
 }
 
-// Form Component
+// Component for a form itemsthe form
+
 class FormComponent: FormItem, Hashable {
     
     var id: UUID = UUID()
+    let formId: FormField
+    var value: Any?
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
@@ -49,37 +67,47 @@ class FormComponent: FormItem, Hashable {
     static func == (lhs: FormComponent, rhs: FormComponent) -> Bool {
         lhs.id == rhs.id
     }
+    
+    init(_ id: FormField) {
+        self.formId = id
+    }
 }
 
-// Text Component
+// Component for a text items the form
 
 final class TextFormComponent: FormComponent {
     let placeholder: String
     let keyboardType: UIKeyboardType
     
-    init(placeholder: String, 
+    init(id: FormField,
+         placeholder: String,
          keyboardType: UIKeyboardType = .default) {
         self.placeholder = placeholder
         self.keyboardType = keyboardType
+        super.init(id)
     }
 }
 
-// Date Component
+// Component for a date item in the form
 
 final class DateFormComponent: FormComponent {
     let mode: UIDatePicker.Mode
     
-    init(mode: UIDatePicker.Mode) {
+    init(id: FormField,
+         mode: UIDatePicker.Mode) {
         self.mode = mode
+        super.init(id)
     }
 }
 
-// Button Component
+// Component for a button item in the form
 
 final class ButtonFormComponent: FormComponent {
     let title: String
     
-    init(title: String) {
-        self.title = title 
+    init(id: FormField,
+         title: String) {
+        self.title = title
+        super.init(id)
     }
 }

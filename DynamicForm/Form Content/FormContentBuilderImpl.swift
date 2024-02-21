@@ -8,16 +8,14 @@
 import Foundation
 
 final class FormContentBuilderImpl {
-    var content: [FormSectionComponent] {
-        return [
-            FormSectionComponent(items: [
-                TextFormComponent(placeholder: "First Name"),
-                TextFormComponent(placeholder: "Last Name"),
-                TextFormComponent(placeholder: "Email",
-                                  keyboardType: .emailAddress),
-                DateFormComponent(mode: .date),
-                ButtonFormComponent(title: "Confirm")
-            ])
-        ]
-    }
+    private(set) var formContent = [
+        FormSectionComponent(items: [
+            TextFormComponent(id: .firstName, placeholder: "First Name"),
+            TextFormComponent(id: .lastName, placeholder: "Last Name"),
+            TextFormComponent(id: .email, placeholder: "Email",
+                              keyboardType: .emailAddress),
+            DateFormComponent(id: .dob, mode: .date),
+            ButtonFormComponent(id: .submit, title: "Confirm")
+        ])
+    ]
 }
