@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DD1D09972B860C1B0043217D /* RegexPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D09962B860C1B0043217D /* RegexPatterns.swift */; };
 		DD1D09992B861EC90043217D /* UITextField+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1D09982B861EC90043217D /* UITextField+Validation.swift */; };
+		DD28EAA12B89F21F002801D0 /* RegexFormItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAA02B89F21F002801D0 /* RegexFormItem.swift */; };
+		DD28EAA42B89F269002801D0 /* ValidationError .swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28EAA32B89F269002801D0 /* ValidationError .swift */; };
 		DD2BE6362B85265900837E0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6352B85265900837E0A /* AppDelegate.swift */; };
 		DD2BE6382B85265900837E0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6372B85265900837E0A /* SceneDelegate.swift */; };
 		DD2BE63A2B85265900837E0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6392B85265900837E0A /* ViewController.swift */; };
@@ -16,9 +18,9 @@
 		DD2BE63F2B85265A00837E0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2BE63E2B85265A00837E0A /* Assets.xcassets */; };
 		DD2BE6422B85265A00837E0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2BE6402B85265A00837E0A /* LaunchScreen.storyboard */; };
 		DD2BE64B2B8526BB00837E0A /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE64A2B8526BB00837E0A /* FormModel.swift */; };
-		DD2BE64E2B852B8F00837E0A /* FormContentBuilderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE64D2B852B8F00837E0A /* FormContentBuilderImpl.swift */; };
-		DD2BE6512B852CC000837E0A /* UICollectionView+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6502B852CC000837E0A /* UICollectionView+Identifier.swift */; };
-		DD2BE6532B852D3500837E0A /* UICollectionViewCell+CleanUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6522B852D3500837E0A /* UICollectionViewCell+CleanUp.swift */; };
+		DD2BE64E2B852B8F00837E0A /* FormContentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE64D2B852B8F00837E0A /* FormContentBuilder.swift */; };
+		DD2BE6512B852CC000837E0A /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6502B852CC000837E0A /* UITableViewCell+Identifier.swift */; };
+		DD2BE6532B852D3500837E0A /* UITableViewCell+ReuseCleanUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6522B852D3500837E0A /* UITableViewCell+ReuseCleanUp.swift */; };
 		DD2BE6562B852DE800837E0A /* FormButtonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6552B852DE800837E0A /* FormButtonCollectionViewCell.swift */; };
 		DD2BE6582B852FC700837E0A /* FormTextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6572B852FC700837E0A /* FormTextCollectionViewCell.swift */; };
 		DD2BE65A2B85317300837E0A /* FormDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2BE6592B85317300837E0A /* FormDateCollectionViewCell.swift */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		DD1D09962B860C1B0043217D /* RegexPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexPatterns.swift; sourceTree = "<group>"; };
 		DD1D09982B861EC90043217D /* UITextField+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Validation.swift"; sourceTree = "<group>"; };
+		DD28EAA02B89F21F002801D0 /* RegexFormItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexFormItem.swift; sourceTree = "<group>"; };
+		DD28EAA32B89F269002801D0 /* ValidationError .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValidationError .swift"; sourceTree = "<group>"; };
 		DD2BE6322B85265900837E0A /* DynamicForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2BE6352B85265900837E0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD2BE6372B85265900837E0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,9 +41,9 @@
 		DD2BE6412B85265A00837E0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD2BE6432B85265A00837E0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD2BE64A2B8526BB00837E0A /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
-		DD2BE64D2B852B8F00837E0A /* FormContentBuilderImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilderImpl.swift; sourceTree = "<group>"; };
-		DD2BE6502B852CC000837E0A /* UICollectionView+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Identifier.swift"; sourceTree = "<group>"; };
-		DD2BE6522B852D3500837E0A /* UICollectionViewCell+CleanUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+CleanUp.swift"; sourceTree = "<group>"; };
+		DD2BE64D2B852B8F00837E0A /* FormContentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormContentBuilder.swift; sourceTree = "<group>"; };
+		DD2BE6502B852CC000837E0A /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		DD2BE6522B852D3500837E0A /* UITableViewCell+ReuseCleanUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseCleanUp.swift"; sourceTree = "<group>"; };
 		DD2BE6552B852DE800837E0A /* FormButtonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButtonCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD2BE6572B852FC700837E0A /* FormTextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD2BE6592B85317300837E0A /* FormDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		DD1D09942B860B800043217D /* Regex */ = {
 			isa = PBXGroup;
 			children = (
+				DD28EAA22B89F257002801D0 /* Error */,
+				DD28EA9F2B89F202002801D0 /* Model */,
 				DD1D09952B860BA40043217D /* Patterns */,
 			);
 			path = Regex;
@@ -71,6 +77,22 @@
 				DD1D09962B860C1B0043217D /* RegexPatterns.swift */,
 			);
 			path = Patterns;
+			sourceTree = "<group>";
+		};
+		DD28EA9F2B89F202002801D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD28EAA02B89F21F002801D0 /* RegexFormItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DD28EAA22B89F257002801D0 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DD28EAA32B89F269002801D0 /* ValidationError .swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 		DD2BE6292B85265900837E0A = {
@@ -94,10 +116,10 @@
 			children = (
 				DD1D09942B860B800043217D /* Regex */,
 				DD2BE65B2B85328700837E0A /* Layout */,
-				DD2BE6542B852DA200837E0A /* CollectionViewCells */,
-				DD2BE64F2B852CA100837E0A /* Extensions */,
-				DD2BE64C2B852B7300837E0A /* Form Content */,
+				DD2BE64C2B852B7300837E0A /* Builder */,
 				DD2BE6492B8526AA00837E0A /* Model */,
+				DD2BE64F2B852CA100837E0A /* Extensions */,
+				DD2BE6542B852DA200837E0A /* Views */,
 				DD2BE6352B85265900837E0A /* AppDelegate.swift */,
 				DD2BE6372B85265900837E0A /* SceneDelegate.swift */,
 				DD2BE6392B85265900837E0A /* ViewController.swift */,
@@ -117,32 +139,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		DD2BE64C2B852B7300837E0A /* Form Content */ = {
+		DD2BE64C2B852B7300837E0A /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				DD2BE64D2B852B8F00837E0A /* FormContentBuilderImpl.swift */,
+				DD2BE64D2B852B8F00837E0A /* FormContentBuilder.swift */,
 			);
-			path = "Form Content";
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		DD2BE64F2B852CA100837E0A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DD2BE6502B852CC000837E0A /* UICollectionView+Identifier.swift */,
-				DD2BE6522B852D3500837E0A /* UICollectionViewCell+CleanUp.swift */,
+				DD2BE6502B852CC000837E0A /* UITableViewCell+Identifier.swift */,
+				DD2BE6522B852D3500837E0A /* UITableViewCell+ReuseCleanUp.swift */,
 				DD1D09982B861EC90043217D /* UITextField+Validation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		DD2BE6542B852DA200837E0A /* CollectionViewCells */ = {
+		DD2BE6542B852DA200837E0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DD2BE6552B852DE800837E0A /* FormButtonCollectionViewCell.swift */,
 				DD2BE6572B852FC700837E0A /* FormTextCollectionViewCell.swift */,
 				DD2BE6592B85317300837E0A /* FormDateCollectionViewCell.swift */,
 			);
-			path = CollectionViewCells;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DD2BE65B2B85328700837E0A /* Layout */ = {
@@ -224,15 +246,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD28EAA12B89F21F002801D0 /* RegexFormItem.swift in Sources */,
 				DD2BE63A2B85265900837E0A /* ViewController.swift in Sources */,
 				DD2BE65D2B8532A600837E0A /* FormCompositionalLayout.swift in Sources */,
 				DD1D09992B861EC90043217D /* UITextField+Validation.swift in Sources */,
 				DD2BE6362B85265900837E0A /* AppDelegate.swift in Sources */,
-				DD2BE6532B852D3500837E0A /* UICollectionViewCell+CleanUp.swift in Sources */,
-				DD2BE64E2B852B8F00837E0A /* FormContentBuilderImpl.swift in Sources */,
+				DD2BE6532B852D3500837E0A /* UITableViewCell+ReuseCleanUp.swift in Sources */,
+				DD2BE64E2B852B8F00837E0A /* FormContentBuilder.swift in Sources */,
 				DD2BE65A2B85317300837E0A /* FormDateCollectionViewCell.swift in Sources */,
 				DD2BE6562B852DE800837E0A /* FormButtonCollectionViewCell.swift in Sources */,
-				DD2BE6512B852CC000837E0A /* UICollectionView+Identifier.swift in Sources */,
+				DD28EAA42B89F269002801D0 /* ValidationError .swift in Sources */,
+				DD2BE6512B852CC000837E0A /* UITableViewCell+Identifier.swift in Sources */,
 				DD2BE6382B85265900837E0A /* SceneDelegate.swift in Sources */,
 				DD2BE6582B852FC700837E0A /* FormTextCollectionViewCell.swift in Sources */,
 				DD1D09972B860C1B0043217D /* RegexPatterns.swift in Sources */,
